@@ -46,3 +46,5 @@ print(type(a),type(b),type(c))
 # Python有一个内置模块random来制作随机数
 import random
 print(random.randrange(1,10))
+
+
