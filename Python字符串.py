@@ -54,3 +54,83 @@ print("expensive" not in txt)
 # 修改代码, 当 expensive不存在时输出
 if "expensive" not in txt:
     print("No, 'expensive' is NOT present")
+
+
+# Python 字符串切片
+# 你可以使用切片语法返回需要的字符
+# 指定开始索引和结束索引, 用冒号分隔
+b = "Hello,World"
+print(b[2:5])
+# 那么通过省略开始索引就可以从头开始切片字符
+print(b[:5])
+# 同样的, 省略了结束索引则切片到最后
+print(b[2:])
+# 若索引为负, 则会从字符串末尾开始切片
+print(b[-5:-2])
+
+
+# Python 修改字符串
+# 内置的函数 upper() 将返回大写的字符串
+au = "Hello world  "
+print(au.upper())
+# lower() 函数将返回小写的字符串
+print(au.lower())
+# 使用函数 strip() 该方法删除开头或结尾的任何空格
+print(au.strip())
+
+# 替换字符串, 使用replace()函数可以将一个字符串替换为另一个
+print(au.replace("H","j"))
+
+# 拆分字符串使用 split() 函数, 这个方法将返回一个列表,其中指定分隔符
+ac = "Hello, World!"
+print(ac.split(","))
+
+
+# 字符串连接,使用 + 号
+aconn = "Hello"
+bconn = "World"
+print(aconn+" "+bconn)
+
+
+# 字符串格式
+"""
+    正如在变量章节里学到的, 我们不能像下面这样组合字符串
+    a = 20
+    b = "I am" + a
+    这样会报错, 字符串无法直接和其他类型相加来连接
+"""
+# 但是我们可以用f-string或者format()函数来实现
+# 要将字符串指定为f-string,只需要在字符串签名加上f, 并在变量内添加占位符号{},如下
+age = 23
+txt = f"my name is john, I'm {age}"
+print(txt)
+# 占位符可以包含变量,操作,函数和修饰符来格式化值
+# 占位符内可以包含用于设置值格式的修饰符
+# 通过添加冒号后跟合法格式类型来包含修饰符, 例如表示两位小数的固定浮点数
+price = 89
+txt = f"The price is {price:.2f} dollars"
+print(txt)
+# 占位符可以包含python代码, 比如数学运算
+txt = f"the price is {20*25} dollars"
+print(txt)
+
+
+# Python 转义字符
+# 要在字符串中插入非法字符, 需要使用转义字符, 转义字符是一个反斜杠
+# txt = "We are the so-called "Vikings" from the north." 这里的双引号使用错误,导致报错
+# 要解决这个问题, 就在非法符号前加上转义符号 \
+txt = "We are the so-called \"Vikings\" from the north."
+# 转义符有许多:
+# \' 单引号
+# \\ 反斜杠
+# \n 换行
+# \r 回车键
+# \t 制表符
+# \b 退格键
+# \f 换页
+# \ooo 八进制值
+# \xhh 十六进制值
+
+
+# 字符串相关的方法, 内容过多不赘述
+# https://www.w3schools.com/python/python_strings_methods.asp
